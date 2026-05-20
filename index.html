@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>迷你世界编辑器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="tip">左键编辑 ｜ 右键旋转视角 ｜ 滚轮缩放</div>
+    <div id="toolbar"></div>
+    <div class="controls">
+        <button id="reset">🏘️ 重置村庄</button>
+        <button id="clear">🌱 清空</button>
+    </div>
+    <div class="world-selector">
+        <button data-world="1">世界1</button>
+        <button data-world="2">世界2</button>
+        <button data-world="3">世界3</button>
+    </div>
+    <div id="hint" class="hint">
+        左键放置 ｜ 右键旋转 ｜ 滚轮缩放
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
