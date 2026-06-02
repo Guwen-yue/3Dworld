@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D 小世界编辑器</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="viewport" class="stage" aria-label="3D 小世界编辑区">
+        <canvas id="worldCanvas" aria-hidden="true"></canvas>
+        <div class="stage-shadow" aria-hidden="true"></div>
+        <div id="hint" class="hint" role="status">拖拽旋转 / 滚轮缩放 / 点击放置</div>
+      </section>
+
+      <aside class="control-dock" aria-label="编辑工具">
+        <header class="dock-header">
+          <p class="eyebrow">桌面模型 · 8×8</p>
+          <h1>3D 小世界编辑器</h1>
+        </header>
+
+        <section class="dock-section" aria-labelledby="slotsTitle">
+          <h2 id="slotsTitle">存档</h2>
+          <div id="slotButtons" class="slot-row" role="group" aria-label="选择存档"></div>
+        </section>
+
+        <section class="dock-section" aria-labelledby="toolsTitle">
+          <h2 id="toolsTitle">工具</h2>
+          <div id="toolGrid" class="tool-grid" role="toolbar" aria-label="摆放工具"></div>
+        </section>
+
+        <section class="dock-section" aria-labelledby="mapTitle">
+          <h2 id="mapTitle">小地图</h2>
+          <div id="miniMap" class="mini-map" aria-label="当前世界小地图"></div>
+        </section>
+
+        <div class="action-row">
+          <button id="resetButton" class="action-button primary" type="button">重置村庄</button>
+          <button id="clearButton" class="action-button" type="button">清空</button>
+        </div>
+
+        <p id="statusLine" class="status-line" aria-live="polite"></p>
+      </aside>
+    </main>
+
+    <noscript>这个小世界需要启用 JavaScript 才能运行。</noscript>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
